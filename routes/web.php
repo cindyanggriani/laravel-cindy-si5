@@ -18,3 +18,11 @@ Route::get('/mahasiswa', function () {
 Route::get('/profile', function () {
     return view('profile');
 });
+
+Route::get('/produk', function () {
+    $produk = [
+        ['kode' => 'BG001', 'nama' => 'Pena', 'jenis' => 'Alat tulis', 'harga' => 20000],
+        ['kode' => 'BG002', 'nama' => 'Buku', 'jenis' => 'Alat tulis', 'harga' => 15000],
+    ];
+    return view('produk', compact('produk'));
+});
